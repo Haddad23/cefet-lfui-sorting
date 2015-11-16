@@ -22,7 +22,7 @@ Estatisticas Ordenar(unsigned long *v, unsigned long n){	//ordena o vetor
 	estatisticas.comparacoes = 0;
 	clock_t tempo1, tempo2;
 	tempo1 = clock();
-    void (*algoritmoEscolhido)(unsigned long *, unsigned long, unsigned long *, unsigned long *) = Selecao; 	// pode ser: Selecao, Insercao, QuickSort ou HeapSort
+    void (*algoritmoEscolhido)(unsigned long *, unsigned long, unsigned long *, unsigned long *) =HeapSort; 	// pode ser: Selecao, Insercao, QuickSort ou HeapSort
     algoritmoEscolhido(v, n, &estatisticas.movimentacoes, &estatisticas.comparacoes);
 	tempo2 = clock();
     estatisticas.tempo =  (double)(tempo2 - tempo1) / CLOCKS_PER_SEC;
